@@ -1,0 +1,1497 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+
+    --nav-head: white;
+    --nav-back: rgb(5, 5, 5);
+    --main-green: #00FF94;
+    --lightgreen: #00ff9557;
+    --grey: gray;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(5, 5, 5);
+    overflow-x: hidden;
+}
+
+.first_page {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-section {
+    padding: 8rem;
+    padding-top: 3rem;
+    /* background-color: blue; */
+}
+
+/* starting of the navbar  */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header ul li {
+    list-style: none;
+    background-color: var(--nav-back);
+    height: 3rem;
+    width: 28rem;
+    align-items: center;
+    padding-top: .6rem;
+    padding-bottom: 2rem;
+}
+
+.header ul li a {
+    font-family: 'Source Code Pro', monospace;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--nav-head);
+    font-size: 2rem;
+    padding: 1rem 2.6rem 1rem 2.6rem;
+    border: .2rem solid var(--main-green);
+    transition-delay: .5s;
+}
+
+/* hovering effect of the borders  */
+.header ul li a :before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: -2.8rem;
+    width: calc(100% + 5.2rem);
+    height: calc(100% + 2rem);
+    border-left: .2rem solid var(--nav-back);
+    border-right: .2rem solid var(--nav-back);
+    transition: 0.5s ease-in-out;
+    transform: scaleY(1);
+}
+
+.header ul li a :hover:before {
+    transform: scaleY(0);
+}
+
+.header ul li a :after {
+    content: '';
+    position: absolute;
+    left: -2.8rem;
+    top: -1.2rem;
+    height: calc(100% + 2rem);
+    width: calc(100% + 5.6rem);
+    border-top: .2rem solid var(--nav-back);
+    border-bottom: .2rem solid var(--nav-back);
+    transition: 0.5s ease-in-out;
+    transform: scaleX(1);
+}
+
+.header ul li a :hover:after {
+    transform: scaleX(0);
+}
+
+.header ul li a span {
+    position: relative;
+    z-index: 1;
+}
+
+.header #box {
+    height: 6rem;
+    width: 8rem;
+}
+
+.header #small {
+    display: none;
+    height: 6rem;
+    width: 8rem;
+}
+
+.header #small img {
+    height: 100%;
+    width: 100%;
+}
+
+.header #box img {
+    height: 100%;
+    width: 100%;
+}
+
+/* .hamburger {
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: .3rem .8rem;
+    border-radius: .5rem;
+    transition: 0.2s;
+    color: var(--nav-head);
+}
+
+.hamburger i {
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.hamburger [name="times"] {
+    display: none;
+} */
+
+
+/* Ending of the navbar  */
+
+/* Sarting of the home  */
+
+.home {
+    display: flex;
+    margin-top: 7rem;
+    margin-right: 0;
+    margin-left: 0;
+    /* background-color: darkred; */
+    justify-content: space-between;
+}
+
+.homebox {
+    /* background-color: darkorange; */
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+}
+
+/* .cont{
+    background-color:darkcyan;
+} */
+.code {
+    font-size: 2.3rem;
+    color: var(--grey);
+}
+
+.pheading {
+    font-size: 2.3rem;
+    color: var(--main-green);
+    font-family: 'PT Mono', monospace;
+}
+
+.name {
+    padding-left: 4rem;
+
+}
+
+.mname {
+    color: var(--nav-head);
+    font-size: 10rem;
+    font-family: 'Nova Square', cursive;
+}
+
+.cont {
+    padding-top: 2.5rem;
+}
+
+.name {
+    /* background-color: blue; */
+    padding: 4rem;
+    padding-bottom: 1rem;
+    width: 75rem;
+}
+
+.cv {
+    /* background-color:red; */
+    height: 50%;
+}
+
+.cv .cvimg .cvim {
+    rotate: -30deg;
+}
+
+.cv .cvdownload {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    border: .3rem solid var(--nav-head);
+    /* background-color: bisque; */
+    position: relative;
+    top: -26rem;
+    right: -5rem;
+}
+
+.cv .cvdownload img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: .9;
+}
+
+.cv .cvdownload .overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    top: -20.2rem;
+    left: 0rem;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 2;
+}
+
+/* CSS round div fill-in on hover  */
+.cv .cvdownload .overlay::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    background: var(--main-green);
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    transition: all 1s;
+}
+
+.cv .cvdownload .overlay:hover:before {
+    width: 100%;
+    height: 100%;
+}
+
+.cv .cvdownload .overlay a {
+    text-decoration: none;
+    color: var(--nav-back);
+    position: relative;
+    top: 9rem;
+    right: -3rem;
+}
+
+.cv .cvdownload .overlay:hover {
+    opacity: 1;
+}
+
+.cv .cvdownload .content1 {
+    position: relative;
+    height: calc(100% + 3rem);
+    width: calc(100% + 3rem);
+    border-radius: 50%;
+    top: -41.7rem;
+    left: -1.6rem;
+    font-size: 2rem;
+    /* background-color: rgba(255, 0, 0, 0.312); */
+    border: .2rem solid transparent;
+    border-left: .2rem solid var(--main-green);
+    border-right: .2rem solid var(--main-green);
+    animation: animte_1 1.5s linear infinite;
+}
+
+.cv .cvdownload .content2 {
+    position: relative;
+    height: calc(100% + 6rem);
+    width: calc(100% + 6rem);
+    border-radius: 50%;
+    top: -66.7rem;
+    left: -3rem;
+    font-size: 2rem;
+    /* background-color: rgba(255, 0, 0, 0.312); */
+    border: .2rem solid transparent;
+    border-top: .2rem solid var(--main-green);
+    border-bottom: .2rem solid var(--main-green);
+    animation: animte_2 3s linear infinite;
+}
+
+@keyframes animte_1 {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes animte_2 {
+    0% {
+        rotate: 360deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+/* Ending of the home  */
+/* Starting of the portfolio page */
+.portfolio {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.second_page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    height: 100vh;
+    margin-top: -43rem;
+}
+
+.portheading {
+    margin-top: 2rem;
+    position: relative;
+    /* background-color: coral; */
+}
+
+.portheading .portname {
+    color: var(--nav-head);
+    font-size: 7rem;
+    font-family: 'Nova Square', cursive;
+}
+
+.portheading:after {
+    position: relative;
+    top: 2.5rem;
+    content: '</h2>';
+    font-size: 2.3rem;
+    color: var(--grey);
+}
+
+.portheading:before {
+    content: '<h2>';
+    font-size: 2.3rem;
+    color: var(--grey);
+    position: relative;
+    top: -6rem;
+}
+
+.portframe {
+    width: 100%;
+    /* background-color: beige; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem 0 4rem;
+}
+
+.portframe .portimage {
+    position: relative;
+    height: 40rem;
+    width: 40rem;
+    border-radius: 50%;
+}
+
+.portframe .portimage:hover:before {
+    content: '';
+    position: absolute;
+    left: -3rem;
+    top: -3rem;
+    right: -3rem;
+    bottom: -3rem;
+    border: .2rem solid var(--nav-head);
+    border-radius: 50%;
+    animation: pluse 1s linear infinite;
+    animation-delay: .1s;
+}
+
+.portframe .portimage:hover:after {
+    content: '';
+    position: absolute;
+    left: -3rem;
+    top: -3rem;
+    right: -3rem;
+    bottom: -3rem;
+    border: .2rem solid var(--nav-head);
+    border-radius: 50%;
+    animation: pluse 1s linear infinite;
+    animation-delay: .5s;
+}
+
+.portframe .portimage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.portframe .portext {
+    /* background-color: aqua; */
+    height: 80%;
+    width: 50%;
+}
+
+.portframe .portext .porttext {
+    display: flex;
+    font-size: 2rem;
+    padding: 2rem;
+    font-family: 'PT Mono', monospace;
+}
+
+.portframe .portext .porttext {
+    height: 80%;
+    /* background-color: yellow; */
+    width: 90%;
+    float: right;
+    display: block;
+}
+
+.portframe .portext .porttext h2 {
+    font-family: 'Nova Square', cursive;
+    color: var(--main-green);
+}
+
+.portframe .portext .porttext p {
+    margin: 2rem;
+    color: var(--nav-head);
+}
+
+.portframe .portext .porttext a {
+    text-decoration: none;
+    color: var(--main-green);
+}
+
+.pleft,
+.pright {
+    font-size: 1.8rem;
+    color: var(--grey);
+}
+
+.progress {
+    margin-top: 3rem;
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: pink; */
+    align-items: center;
+}
+
+.progress button {
+    cursor: pointer;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: .2rem solid var(--nav-head);
+    /* background-color: orchid; */
+    opacity: .6;
+    transition: all 1.5s ease;
+}
+
+.progress button i {
+    font-size: 2.5rem;
+    color: var(--lightgreen);
+    transition: all 2s ease;
+}
+
+.progress button:hover {
+    height: 8rem;
+    width: 8rem;
+    opacity: 1;
+}
+
+.progress button i:hover {
+    font-size: 4rem;
+    color: var(--main-green);
+}
+
+.progress .bar {
+    /* background-color: blue; */
+    width: 80%;
+}
+
+.progress .bar .steps {
+    position: relative;
+    background-color: var(--lightgreen);
+    width: 100%;
+    top: 50%;
+    height: 1rem;
+}
+
+.progress .bar .steps #indicator {
+    position: relative;
+    background-color: var(--main-green);
+    height: 100%;
+    width: 0;
+    transition: all 1s ease;
+}
+
+@keyframes pluse {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+
+/* Ending of the portfolio page  */
+
+/* Starting of the Skills Page  */
+
+.skills {
+    margin-top: -5rem;
+    display: flex;
+    justify-content: center;
+    /* background-color: violet; */
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.skiheading {
+    position: relative;
+    /* background-color: bisque; */
+    margin-top: 2rem;
+}
+
+.skiheading .skiname {
+    color: var(--nav-head);
+    font-size: 7rem;
+    font-family: 'Nova Square', cursive;
+}
+
+.skills .skiheading:after {
+    position: relative;
+    top: 2.5rem;
+    content: '</h3>';
+    font-size: 2.3rem;
+    color: var(--grey);
+}
+
+.skills .skiheading:before {
+    content: '<h3>';
+    font-size: 2.3rem;
+    color: var(--grey);
+    position: relative;
+    top: -6rem;
+}
+
+.skills .skiframe {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: brown; */
+    height: 70%;
+    margin-top: 2rem;
+}
+
+/* starting of the skill bar  */
+
+.container {
+    width: 50rem;
+    padding: 2.5rem 3rem;
+    display: flex;
+    align-items: center;
+    /* background-color: darkorchid; */
+}
+
+.horizontal-bars .bar {
+    margin: 4rem 0;
+    width: 50rem;
+}
+
+.horizontal-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.horizontal-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.horizontal-bars .bar .info {
+    margin-bottom: .5rem;
+}
+
+.horizontal-bars .bar .info span {
+    font-size: 1.7rem;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+    color: var(--nav-head);
+    font-family: 'PT Mono', monospace;
+}
+
+.horizontal-bars .bar .progress-line {
+    position: relative;
+    border-radius: 1rem;
+    width: 100%;
+    height: .5rem;
+    background-color: var(--lightgreen);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.horizontal-bars .bar .progress-line span {
+    height: 100%;
+    background-color: var(--main-green);
+    position: absolute;
+    border-radius: 1rem;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 80%;
+}
+
+.progress-line.jquery span {
+    width: 85%;
+}
+
+.progress-line.C span {
+    width: 80%;
+}
+
+.progress-line.python span {
+    width: 50%;
+}
+
+.progress-line.mysql span {
+    width: 75%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    padding: .1rem .8rem;
+    background-color: #000000c2;
+    color: var(--nav-head);
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    top: -2.8rem;
+    right: -2rem;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+    font-family: 'PT Mono', monospace;
+}
+
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "80%";
+}
+
+.progress-line.jquery span::after {
+    content: "85%";
+}
+
+.progress-line.C span::after {
+    content: "80%";
+}
+
+.progress-line.python span::after {
+    content: "50%";
+}
+
+.progress-line.mysql span::after {
+    content: "75%";
+}
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: .7rem solid transparent;
+    border-bottom-width: 0rem;
+    border-right-width: 0rem;
+    border-top-color: #000000c2;
+    top: -1rem;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 17rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 12rem;
+    height: 16rem;
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stroke: var(--lightgreen);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+.path {
+    stroke-width: 10;
+    stroke: var(--main-green);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 100;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7rem;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+    color: var(--nav-head);
+    font-family: 'PT Mono', monospace;
+
+}
+
+.radial-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -.5rem;
+    transform: translateX(-50%);
+    font-size: 1.7rem;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+    color: var(--nav-head);
+    font-family: 'PT Mono', monospace;
+}
+
+/* ending of the skill bar  */
+
+
+/* Ending of the Skills Page  */
+
+/* Starting of the contact page  */
+.contact {
+    margin-top: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: gold; */
+    height: 100vh;
+}
+
+.conheading {
+    position: relative;
+    /* background-color: bisque; */
+    margin-top: 2rem;
+    height: 15%;
+}
+
+.conheading .conname {
+    color: var(--nav-head);
+    font-size: 7rem;
+    font-family: 'Nova Square', cursive;
+}
+
+.contact .conheading:after {
+    position: relative;
+    top: 2.5rem;
+    content: '</h4>';
+    font-size: 2.3rem;
+    color: var(--grey);
+}
+
+.contact .conheading:before {
+    content: '<h4>';
+    font-size: 2.3rem;
+    color: var(--grey);
+    position: relative;
+    top: -6rem;
+}
+
+.contact .conframe {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: brown; */
+    height: 80%;
+}
+
+.context {
+    font-size: 2.4rem;
+    font-family: 'Nova Square', cursive;
+
+}
+
+/* Satarting of the envolape  */
+#wrap {
+    width: 53rem;
+    margin: auto;
+    height: 92%;
+    /* background-color: crimson; */
+}
+
+#form-wrap {
+    overflow: hidden;
+    height: 44.7rem;
+    position: relative;
+    top: 0rem;
+    transition: all 1s ease-in-out .3s;
+}
+
+#form-wrap:before {
+    content: "";
+    position: absolute;
+    bottom: 12.8rem;
+    left: 0rem;
+    background: url("../assets/enbefore.png");
+    width: 53rem;
+    height: 31.7rem;
+}
+
+#form-wrap:after {
+    content: "";
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    background: url('../assets/enafter.png');
+    width: 53rem;
+    height: 25.9rem;
+
+}
+
+#form-wrap.hide:after,
+#form-wrap.hide:before {
+    display: none;
+}
+
+#form-wrap:hover {
+    height: 77.7rem;
+    top: -20rem;
+
+}
+
+form {
+    background: var(--nav-head);
+    position: relative;
+    top: 20rem;
+    overflow: hidden;
+    height: 20rem;
+    width: 40rem;
+    margin: 0rem auto;
+    padding: 2rem;
+    border: .1rem solid var(--nav-head);
+    border-right: .3rem;
+    transition: all 1s ease-in-out .3s;
+
+}
+
+#form-wrap:hover form {
+    height: 53rem;
+
+}
+
+label {
+    margin: 1.1rem 2rem 0 0;
+    font-size: 1.5rem;
+    color: var(--grey);
+    text-transform: uppercase;
+    font-style: 'PT Mono', monospace;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    font: 14px normal uppercase, arial, serif;
+    color: dimgray;
+    background: none;
+    width: 38rem;
+    height: 3.7rem;
+    padding: 0rem 1rem;
+    margin: 0 0 1rem 0;
+    border: .1rem solid var(--lightgreen);
+    border-radius: .5rem;
+    outline: none;
+    font-family: 'PT Mono', monospace;
+}
+
+
+textarea {
+    height: 8rem;
+    padding-top: 1.4rem;
+}
+
+textarea:focus,
+input[type=text]:focus,
+input[type=email]:focus {
+    background: var(--nav-head);
+}
+
+
+#form-wrap input[type=submit] {
+    position: relative;
+    font-family: tahoma;
+    font-size: 2.4rem;
+    color: var(--grey);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    background: none;
+    cursor: pointer;
+    border-radius: .3rem;
+    transition: opacity 0.7s ease-in-out 0s;
+    border: 0;
+    font-family: 'PT Mono', monospace;
+}
+
+#form-wrap:hover input[type=submit] {
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 1.3s;
+}
+
+/* Ending of the envolape */
+
+/* starting of the filp the page */
+.conframe .flip-card-3D-wrapper {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    -o-perspective: 90rem;
+    -webkit-perspective: 90rem;
+    -ms-perspective: 90rem;
+    perspective: 90rem;
+    margin: 2rem auto;
+    background-color: var(--nav-back);
+}
+
+#flip-card {
+    width: 100%;
+    height: 100%;
+    /* text-align: center; */
+    margin: 5rem auto;
+    position: absolute;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -o-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.do-flip {
+    -o-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+#flip-card-btn-turn-to-back,
+#flip-card-btn-turn-to-front {
+    position: relative;
+    left: 90%;
+    width: 20rem;
+    height: 4rem;
+    top: -.3rem;
+    background: var(--nav-back);
+    cursor: pointer;
+    visibility: hidden;
+    font-family: 'PT Mono', monospace;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0;
+    color: var(--lightgreen);
+    border: 0;
+    transition: all .5s ease;
+}
+
+/* #flip-card-btn-turn-to-front {
+    left: 80rem;
+    top: -27rem;
+} */
+
+#flip-card-btn-turn-to-back:hover,
+#flip-card-btn-turn-to-front:hover {
+    color: var(--main-green);
+}
+
+#flip-card .flip-card-front,
+#flip-card .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 2;
+    /* -webkit-box-shadow: .5rem .6rem .32rem .2rem rgba(133, 133, 133, 0.71);
+    -moz-box-shadow: .5rem .6rem .32rem .2rem rgba(133, 133, 133, 0.71);
+    box-shadow: .5rem .6rem .32rem .2rem rgba(133, 133, 133, 0.71); */
+}
+/* 
+#flip-card .flip-card-front {
+    background: lightblue;
+} */
+
+#flip-card .flip-card-back {
+    /* background: lightgreen; */
+    -o-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* End of the filp the page */
+
+/* .flip-card-front .socialpara {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    background-color: cyan;
+} */
+
+.flip-card-front .socialpara p {
+    width: 80%;
+    font-size: 1.8rem;
+    /* background-color: burlywood; */
+    font-family: 'PT Mono', monospace;
+}
+
+.socialpara p:after {
+    content: '<p>';
+    color: var(--grey);
+    font-size: 1.8rem;
+    display: block;
+    position: relative;
+    left: 29rem;
+}
+
+.socialpara p:before {
+    content: '<p>';
+    color: var(--grey);
+    font-size: 1.8rem;
+    display: block;
+    position: relative;
+    right: 2rem;
+}
+
+.flip-card-front .socialplat {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    justify-content: space-between;
+    /* background-color: hotpink; */
+}
+
+.socialplat .socialbasic {
+    margin-top: 4rem;
+    /* background-color: crimson; */
+    width: 40%;
+    height: 70%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.socialbasic h3 {
+    align-items: center;
+    row-gap: 1rem;
+    line-height: 8rem;
+    font-size: 2rem;
+    color: var(--nav-head);
+    font-family: 'PT Mono', monospace;
+}
+
+.socialbasic h3 a {
+    text-decoration: none;
+    color: var(--nav-head);
+    opacity: .6;
+    transition: all .5s ease;
+}
+
+.socialbasic h3 i {
+    color: var(--main-green);
+    font-size: 3rem;
+    transition: all .5s ease;
+    opacity: .6;
+    transition: all .5s ease;
+}
+
+.socialbasic h3 i:hover,
+.socialbasic h3 a:hover {
+    opacity: 1;
+}
+
+.socialplat .socialtouch {
+    /* background-color: crimson; */
+    width: 40%;
+    height: 50%;
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialtouch a {
+    text-decoration: none;
+    color: var(--lightgreen);
+    font-size: 3rem;
+    gap: 3rem;
+    transition: all .5s ease;
+    padding-left: 4rem;
+}
+
+.socialtouch a:hover {
+    color: var(--main-green);
+}
+
+/* Ending Of the Contact Page  */
+
+
+/* Starting of the mediaqueruies  */
+
+/* Making the tablet freindly */
+
+/* Making the Mobile freindly */
+@media (max-width: 400px) {
+    .main-section {
+        padding: 1rem;
+        width: 50rem;
+        /* background-color: green; */
+        overflow-x: hidden;
+    }
+
+    #box {
+        display: none;
+    }
+
+    .header ul li {
+        width: 25rem;
+        padding-left: 1rem;
+    }
+
+    .header ul li a {
+        font-size: 1.5rem;
+    }
+
+    /* First Page media query  */
+    .home {
+        width: 50rem;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+    .name {
+        width: 42rem;
+        height: 35rem;
+    }
+
+    .cvimg {
+        left: 20rem;
+    }
+
+    .cvpos {
+        position: relative;
+        left: 10rem;
+    }
+
+    .cv {
+        height: 30rem;
+    }
+
+
+    /* Second page start  */
+    .second_page {
+        margin-top: -40rem;
+        width: 50rem;
+        height: 150vh;
+    }
+
+    .portheading {
+        width: 40rem;
+    }
+
+    .portframe {
+        padding-top: 3rem;
+        height: 60rem;
+        flex-direction: column;
+    }
+
+    .portframe .portimage {
+        width: 20rem;
+        height: 28rem;
+    }
+
+    .portframe .portext {
+        margin-top: 3rem;
+        width: 100%;
+    }
+
+
+    /* third page is started  */
+    .skills {
+        margin-top: 0;
+        width: 50rem;
+        height: 170vh;
+    }
+
+    .skills .skiframe {
+        width: 50rem;
+        flex-direction: column;
+    }
+
+    .container {
+        width: 44rem;
+    }
+
+    .horizontal-bars .bar {
+        width: 44rem;
+    }
+
+    /* Last Page is started  */
+    .contact {
+        margin-top: 19rem;
+        width: 50rem;
+        height: 120vh;
+    }
+
+    .contact .conheading:after {
+        top: -1rem;
+        right: -44rem;
+    }
+
+    .flip-card-front .socialpara {
+        height: 0;
+    }
+
+    .flip-card-front .socialplat {
+        flex-direction: column;
+        height: 90%;
+        
+    }
+
+    .socialplat .socialbasic {
+        width: 100%;
+    }
+
+    .socialplat .socialtouch {
+        width: 100%;
+    }
+
+    #flip-card-btn-turn-to-back,
+    #flip-card-btn-turn-to-front {
+        left: 25%;
+        top: 1rem;
+    }
+
+    #wrap {
+        width: 100%;
+    }
+
+    #form-wrap:before {
+        bottom: 5rem;
+        background-size: 40rem 18.7rem;
+        background-repeat: no-repeat;
+    }
+
+    #form-wrap:after {
+        background-size: 40rem 12.9rem;
+        background-repeat: no-repeat;
+    }
+
+    #form-wrap:hover form {
+        height: 40rem;
+    }
+
+    form {
+        top: 20rem;
+        width: 27rem;
+        height: 6rem;
+    }
+
+    input[type=text],
+    input[type=email],
+    textarea {
+        width: 25rem;
+    }
+
+
+
+}
+
+
+
+/* Ending of the mediaqueries  */
+
+
+/* Preloader */
+#preloader{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: black;
+}
+.center-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+    position: fixed;
+    z-index: 100;
+    background-color: black;
+    transition: opacity 0.25s, visbility 1s;
+	/****** center box
+	width: 300px;
+	height: 300px;
+	border: solid 1px #aaa;
+	******/
+}
+.fade{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader-circle-11 {
+	position: relative;
+	width: 70px;
+	height: 70px;
+	transform-style: preserve-3d;
+	perspective: 400px;
+}
+.loader-circle-11 .arc {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border-bottom: 5px solid var(--main-green);
+}
+.loader-circle-11 .arc:nth-child(1) {
+	animation: rotate1 1.15s linear infinite;
+}
+.loader-circle-11 .arc:nth-child(2) {
+	animation: rotate2 1.15s linear infinite;
+}
+.loader-circle-11 .arc:nth-child(3) {
+	animation: rotate3 1.15s linear infinite;
+}
+.loading .arc:nth-child(1) {
+	animation-delay: -0.8s;
+}
+.loader-circle-11 .arc:nth-child(2) {
+	animation-delay: -0.4s;
+}
+.loader-circle-11 .arc:nth-child(3) {
+	animation-delay: 0s;
+}
+@keyframes rotate1 {
+	from {
+		transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
+	}
+	to {
+		transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
+	}
+}
+@keyframes rotate2 {
+	from {
+		transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
+	}
+	to {
+		transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
+	}
+}
+@keyframes rotate3 {
+	from {
+		transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
+	}
+	to {
+		transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
+	}
+}

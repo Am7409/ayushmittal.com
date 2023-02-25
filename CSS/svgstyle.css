@@ -1,0 +1,175 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+/* changeing the scroll bar */
+
+::-webkit-scrollbar{
+  width: .7rem;
+}
+::-webkit-scrollbar-thumb{
+background-color:#00ff9557;
+border-radius: 1rem;
+/* transition: background-color 3s ease; */
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #00FF94;
+}
+
+.containeer{
+    /* background-color: blueviolet; */
+    height: 50rem;
+}
+.containeer i{
+    color: white;
+    position: relative;
+    top:-48rem;
+    left: -100rem;
+    font-size: 6rem;
+}
+#svg1{
+    /* width="1023" height="845"  */
+    height:100%;
+    width: 75rem;
+    /* background-color: rgba(0, 0, 255, 0.267); */
+    position: relative;
+    top: -35rem;
+    left: -12rem;
+  }
+  #svg1 .draw1{
+    stroke: #00FF94;
+     stroke-width: .5rem;
+     fill:none;
+     /* These both are changed according to the image */
+     stroke-dasharray: 1809;
+     stroke-dashoffset: 1809;
+    animation: drawing 5s forwards ;
+  }
+  #svg11{
+    /* width="546" height="543" */
+    height: 40rem;
+    width: 40rem;
+    /* background-color: rgba(255, 228, 196, 0.338); */
+    position: relative;
+    top:-60rem;
+    opacity: 0;
+  }
+  #svg11 .draw11{
+    stroke: #00FF94;
+    stroke-width: .5rem;
+    fill: none;
+    stroke-dasharray: 2500;
+    stroke-dashoffset: 2500;
+    animation: drawing 5s forwards;
+  }
+
+  /* width="572" height="568" */
+  
+.portcontaineer{
+  /* background-color:rgba(255, 235, 205, 0.367); */
+  height: 40rem ;
+}
+.portcontaineer i{
+  font-size: 6rem;
+  position: relative;
+  color: white;
+  top:-21rem;
+  right: -12rem;
+}
+#svg2{
+  /* width="546" height="543" */
+  height: 40rem;
+  width: 40rem;
+  /* background-color: rgba(255, 228, 196, 0.338); */
+  position: relative;
+  top:-5rem;
+  right: -30%;
+}
+#svg2 .draw2{
+  stroke: #00FF94;
+  stroke-width: .5rem;
+  fill: none;
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 2500;
+  animation: drawing 5s forwards;
+}
+  #svg3{
+    height: 40rem ;
+    width: .3rem;
+    position: relative;
+    top:-3rem;
+  }
+  #svg3 .draw3{
+    stroke: #00FF94;
+     stroke-width: .5rem;
+     fill:none;
+     /* These both are changed according to the image */
+     stroke-dasharray: 300;
+     stroke-dashoffset: 300;
+    animation: drawing 5s forwards ;
+  }
+
+  @keyframes drawing {
+    to{
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+/* Starting of the mediaqueruies  */
+
+/* Making the tablet freindly */
+
+/* Making the Mobile freindly */
+
+@media (max-width: 400px){
+  .containeer{
+    height: 60rem;
+    width: 50rem;
+  }
+  #svg1{
+    opacity: 0;
+  }
+  #svg11{
+  height: 20rem;
+  width: 20rem;
+  /* background-color: rgba(255, 228, 196, 0.338); */
+  position: relative;
+  left:15rem;
+  opacity: 1;
+  }
+  .containeer i{
+    z-index: 3;
+    left: 3rem;
+    top:-71.6rem;
+    font-size: 3rem;
+  }
+
+  /*Second one */
+  .portcontaineer{
+    width: 50rem;
+    height: 21rem;
+  }
+  .portcontaineer i{
+    font-size: 3rem;
+    top:-7rem;
+    left: 3rem;
+  }
+  #svg2{
+    width: 20rem;
+    height: 20rem;
+    top:1rem;
+  }
+  /* Third one  */
+  #svg3{
+    position: relative;
+    top:10rem;
+    height: 28rem;
+  }
+
+}
+
+
+
+
+/* Ending of the mediaqueries  */
