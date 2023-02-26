@@ -12,7 +12,10 @@
     --lightgreen: #00ff9557;
     --grey: gray;
 }
-
+*::selection{
+    background: var(--main-green);
+    color: var(--nav-head);
+}
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
