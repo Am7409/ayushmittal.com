@@ -69,11 +69,11 @@ body {
     content: '';
     position: absolute;
     top: -1rem;
-    left: -2.8rem;
-    width: calc(100% + 5.2rem);
+    left: -2.9rem;
+    width: calc(100% + 5rem);
     height: calc(100% + 2rem);
-    border-left: .2rem solid var(--nav-back);
-    border-right: .2rem solid var(--nav-back);
+    border-left: .4rem solid var(--nav-back);
+    border-right: .4rem solid var(--nav-back);
     transition: 0.5s ease-in-out;
     transform: scaleY(1);
 }
@@ -86,11 +86,11 @@ body {
     content: '';
     position: absolute;
     left: -2.8rem;
-    top: -1.2rem;
-    height: calc(100% + 2rem);
+    top: -1.3rem;
+    height: calc(100% + 1.8rem);
     width: calc(100% + 5.6rem);
-    border-top: .2rem solid var(--nav-back);
-    border-bottom: .2rem solid var(--nav-back);
+    border-top: .4rem solid var(--nav-back);
+    border-bottom: .4rem solid var(--nav-back);
     transition: 0.5s ease-in-out;
     transform: scaleX(1);
 }
